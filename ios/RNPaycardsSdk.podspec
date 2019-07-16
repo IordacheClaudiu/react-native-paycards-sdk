@@ -1,9 +1,9 @@
 require 'json'
 
-package = JSON.parse(File.read('package.json'))
+package = JSON.parse(File.read('../package.json'))
 
 Pod::Spec.new do |s|
-  s.name           = 'react-native-onfido-sdk'
+  s.name           = 'react-native-paycards-sdk'
   s.version        = package['version']
   s.summary        = package['description']
   s.description    = package['description']
