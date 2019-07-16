@@ -9,12 +9,12 @@ export default class App extends Component {
   }
   
   render() {
+    console.log(RNPaycardsSdk);
     return (
       <View style={styles.container}>
         <View style={styles.top} >
           <Text>This state of Bulb come from Native Code to JavaScript</Text>
         </View>
-        <RNPaycardsSdk/>
       </View>
     );
   }
