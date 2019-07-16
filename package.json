@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Dummy test integrating Paycards SDK",
   "main": "index.js",
+  "homepage": "https://github.com/IordacheClaudiu/react-native-stripe-sdk",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IordacheClaudiu/react-native-stripe-sdk"
+    "url": "https://github.com/IordacheClaudiu/react-native-stripe-sdk.git"
   },
   "keywords": [
     "react-native"
