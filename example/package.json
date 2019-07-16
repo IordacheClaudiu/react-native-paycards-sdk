@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "16.8.6",
     "react-native": "0.60.3",
-    "react-native-paycards-sdk": "https://github.com/IordacheClaudiu/react-native-paycards-sdk.git"
+    "react-native-paycards-sdk": "git+https://github.com/IordacheClaudiu/react-native-paycards-sdk.git"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",

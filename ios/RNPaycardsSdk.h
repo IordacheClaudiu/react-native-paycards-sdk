@@ -1,11 +1,11 @@
 
-#if __has_include("RCTViewManager.h")
-#import "RCTViewManager.h"
+#if __has_include("RCTBridgeModule.h")
+#import "RCTBridgeModule.h"
 #else
-#import <React/RCTViewManager.h>
+#import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNPaycardsSdk : RCTViewManager
+@interface RNPaycardsSdk : NSObject <RCTBridgeModule>
 
 @end
   
