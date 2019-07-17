@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, requireNativeComponent } from 'react-native';
-import { RNPaycardsView } from 'react-native-paycards-sdk';
+// import { RNPaycardsView } from 'react-native-paycards-sdk';
 
-// const RNPaycardsView = requireNativeComponent("RNPaycardsView");
+const RNPaycardsView = requireNativeComponent("RNPaycardsView");
 
 
 export default class App extends Component {
@@ -12,6 +12,7 @@ export default class App extends Component {
   }
   
   render() {
+    console.log(RNPaycardsView);
     return (
       <View style={styles.container}>
         <View style={styles.top} >
