@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import RNPaycardsView from 'react-native-paycards-sdk';
+import { StyleSheet, Text, View, requireNativeComponent } from 'react-native';
+import { RNPaycardsView } from 'react-native-paycards-sdk';
+
+// const RNPaycardsView = requireNativeComponent("RNPaycardsView");
+
 
 export default class App extends Component {
 
@@ -9,8 +12,6 @@ export default class App extends Component {
   }
   
   render() {
-    console.log(RNPaycardsView);
-    // RNPaycardsSdk.addEvent('Birthday Party', '4 Privet Drive, Surrey');
     return (
       <View style={styles.container}>
         <View style={styles.top} >
