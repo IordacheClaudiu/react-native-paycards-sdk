@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { RNPaycardsSdk } from 'react-native-paycards-sdk';
+import RNPaycardsView from 'react-native-paycards-sdk';
 
 export default class App extends Component {
 
@@ -9,12 +9,14 @@ export default class App extends Component {
   }
   
   render() {
-    console.log(RNPaycardsSdk);
+    console.log(RNPaycardsView);
+    // RNPaycardsSdk.addEvent('Birthday Party', '4 Privet Drive, Surrey');
     return (
       <View style={styles.container}>
         <View style={styles.top} >
           <Text>This state of Bulb come from Native Code to JavaScript</Text>
         </View>
+        <RNPaycardsView/>
       </View>
     );
   }

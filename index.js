@@ -1,8 +1,6 @@
 
-import { NativeModules } from 'react-native';
+import { requireNativeComponent } from 'react-native';
+const RNPaycardsView = requireNativeComponent('RNPaycardsView')
+export default RNPaycardsView;
 
-const { RNPaycardsSdk } = NativeModules;
 
-console.log(RNPaycardsSdk);
-
-export default RNPaycardsSdk;
