@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, requireNativeComponent } from 'react-native';
-// import { RNPaycardsView } from 'react-native-paycards-sdk';
-
-const RNPaycardsView = requireNativeComponent("RNPaycardsView");
-
+import { StyleSheet, Text, View } from 'react-native';
+import PaycardsView from './PaycardsView';
 
 export default class App extends Component {
 
   constructor(props) {
     super(props);
   }
-  
+
   render() {
-    console.log(RNPaycardsView);
     return (
       <View style={styles.container}>
         <View style={styles.top} >
           <Text>This state of Bulb come from Native Code to JavaScript</Text>
         </View>
-        <RNPaycardsView/>
+        <PaycardsView style={styles.bottom}
+          frameColor={"#F5AEC0"}
+          onPaycardRecognized={this._onPaycardRecognized} />
       </View>
     );
+  }
+
+  _onPaycardRecognized = (event) => {
+    console.log(event);
   }
 }
 const styles = StyleSheet.create({
@@ -37,5 +39,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "red"
   },
 });

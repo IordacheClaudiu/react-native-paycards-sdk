@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'React'
   s.dependency 'PayCardsRecognizer'
-
+  s.dependency 'Hex'
 end
