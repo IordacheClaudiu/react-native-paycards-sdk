@@ -15,7 +15,8 @@ export default class App extends Component {
           <Text>This state of Bulb come from Native Code to JavaScript</Text>
         </View>
         <PaycardsView style={styles.bottom}
-          frameColor={"#F5AEC0"}
+          frameColor={"#86BACF"}
+          torch={{isOn: true, value: 0.5}}
           onPaycardRecognized={this._onPaycardRecognized} />
       </View>
     );

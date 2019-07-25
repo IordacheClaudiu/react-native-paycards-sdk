@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <React/RCTComponent.h>
 
+typedef struct {
+    BOOL isON;
+    float value;
+} RNPaycardsTorchDescriptor;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RNPaycardsView : UIView
 
 @property (nonatomic, copy) RCTBubblingEventBlock onPaycardRecognized;
 @property (nonatomic, strong) UIColor *frameColor;
+@property (nonatomic) RNPaycardsTorchDescriptor torch;
 
 @end
 

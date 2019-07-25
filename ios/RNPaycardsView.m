@@ -23,13 +23,19 @@
     self = [super initWithFrame:frame];
     if (self) {
         _frameColor = [UIColor greenColor];
+        RNPaycardsTorchDescriptor descriptor;
+        descriptor.isON = false;
+        descriptor.value = 0.0;
+        _torch = descriptor;
     }
     return self;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
+    RCTLogInfo(@"[RN] willMoveToSuperview");
     if (newSuperview) {
         [self.cardRecognizer startCamera];
+        [self.cardRecognizer turnTorchOn:self.torch.isON withValue:self.torch.value];
     } else {
         [self.cardRecognizer stopCamera];
     }
@@ -42,18 +48,24 @@
 #pragma mark - Accessors
 
 - (void)setFrameColor:(UIColor *)frameColor {
+    RCTLogInfo(@"[RN] setFrameColor");
     _frameColor = frameColor;
-    self.cardRecognizer = nil;
-    [self.cardRecognizer startCamera];
+}
+
+- (void)setTorch:(RNPaycardsTorchDescriptor)torchDescriptor {
+    RCTLogInfo(@"[RN] setTorch");
+    _torch = torchDescriptor;
 }
 
 - (PayCardsRecognizer *)cardRecognizer {
+    RCTLogInfo(@"[RN] cardRecognizer");
     if (!_cardRecognizer) {
         _cardRecognizer = [[PayCardsRecognizer alloc] initWithDelegate:self
                                                             resultMode:PayCardsRecognizerResultModeAsync
                                                              container:self
-                                                            frameColor:self.frameColor];
+                                                            frameColor:_frameColor];
     }
+    [_cardRecognizer turnTorchOn:true withValue:1.0f];
     return _cardRecognizer;
 }
 

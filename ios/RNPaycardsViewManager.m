@@ -9,6 +9,7 @@
 #import "RNPaycardsViewManager.h"
 #import "RNPaycardsView.h"
 #import <UIKit/UIKit.h>
+#import <UIColor+Hex.h>
 
 @interface RNPaycardsViewManager()
 
@@ -20,11 +21,18 @@
 
 RCT_EXPORT_MODULE()
 RCT_EXPORT_VIEW_PROPERTY(onPaycardRecognized, RCTBubblingEventBlock)
-RCT_CUSTOM_VIEW_PROPERTY(frameColor, UIColor, RNPaycardsView)
+RCT_CUSTOM_VIEW_PROPERTY(frameColor, NSString *, RNPaycardsView)
 {
     RCTLogInfo(@"FrameColor: %@", json);
-    self.paycardsView.frameColor = [UIColor redColor];
-//    [view setRegion:json ? [RCTConvert MKCoordinateRegion:json] : defaultView.region animated:YES];
+    [self.paycardsView setFrameColor:[UIColor colorWithCSS:(NSString *)json]];
+}
+RCT_CUSTOM_VIEW_PROPERTY(torch, id, RNPaycardsView)
+{
+    RCTLogInfo(@"TorchDescriptor: %@", json);
+    RNPaycardsTorchDescriptor torchDescriptor;
+    torchDescriptor.isON = (BOOL)json[@"isOn"];
+    torchDescriptor.value = [(NSNumber *)json[@"value"] floatValue];
+    [self.paycardsView setTorch:torchDescriptor];
 }
 
 - (UIView *)view {

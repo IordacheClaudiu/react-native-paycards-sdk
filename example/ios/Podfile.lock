@@ -61,6 +61,7 @@ PODS:
   - react-native-paycards-sdk (1.0.0):
     - PayCardsRecognizer
     - React
+    - "UIColor+Hex"
   - React-RCTActionSheet (0.60.3):
     - React-Core (= 0.60.3)
   - React-RCTAnimation (0.60.3):
@@ -85,6 +86,10 @@ PODS:
   - React-RCTWebSocket (0.60.3):
     - React-Core (= 0.60.3)
     - React-fishhook (= 0.60.3)
+  - "UIColor+Hex (1.0.1)":
+    - "UIColor+Hex/NSColor (= 1.0.1)"
+    - "UIColor+Hex/UIColor (= 1.0.1)"
+  - "UIColor+Hex/UIColor (1.0.1)"
   - yoga (0.60.3.React)
 
 DEPENDENCIES:
@@ -116,6 +121,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - boost-for-react-native
     - PayCardsRecognizer
+    - "UIColor+Hex"
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -179,7 +185,7 @@ SPEC CHECKSUMS:
   React-jsi: c2b6e57836bcae2677a036384111dc2c58e94369
   React-jsiexecutor: d9023c5c199114d2b6f38ec861a4d923c73d0735
   React-jsinspector: 817b64f3c8a807f09d78620f4f505868d89b26f3
-  react-native-paycards-sdk: 9f33d22c3f97f5f6c67b715416d74ceddb166904
+  react-native-paycards-sdk: 6fd5d08dd1df79f1c3731c4fa302af36fe8284db
   React-RCTActionSheet: 9c42321fd5652515d706dd722c5a10b1970d7ec8
   React-RCTAnimation: fabb087dde8964c9a835a7fabd0e7e5701787913
   React-RCTBlob: 93f34281d9c9c9e216b25824309eed9fe22a5d41
@@ -190,6 +196,7 @@ SPEC CHECKSUMS:
   React-RCTText: b026f8350c2cbe0daeb9880dd9c6e018fce0daf7
   React-RCTVibration: 5d9ed4a968e9d42880ddcc7c29bee3417c745408
   React-RCTWebSocket: 69d8565d66043f244b4129f3d7154c5689fb7d3e
+  "UIColor+Hex": 9fee91bb8e19f17dd40a79ae1e98949a6a84489d
   yoga: 843fe25849b56131275bf3e5da2c468e96f68aff
 
 PODFILE CHECKSUM: d4926554161161f8311af602ecd73f9dedb15513
